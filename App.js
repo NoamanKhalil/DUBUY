@@ -4,10 +4,19 @@ import {Dimensions ,SafeAreaView, StyleSheet,TouchableWithoutFeedback,Alert, Tex
 import{ useDimensions,useDeviceOrientation } from '@react-native-community/hooks';
 import  ViewImageScreen from './app/screens/ViewImageScreen';
 import MessagesScreen from './app/screens/MessagesScreen';
+import Screen from './app/components/Screen';
+import Icon from './app/components/icon';
+import ListItem from './app/components/ListItem';
 
 
 export default function App() {
   return (
-  <MessagesScreen/>
+   <Screen>
+     <ListItem 
+     title = "my title" 
+     
+     ImageComponent={<Icon name="email"/>}
+     />
+     </Screen>
     );
 }
