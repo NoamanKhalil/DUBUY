@@ -20,10 +20,6 @@ const initialMessages =[
         }
 ]
 
-
-
-
-
 function MessagesScreen(props) {
 
     const [messages,setMessages] = useState(initialMessages);
