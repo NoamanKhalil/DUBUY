@@ -1,12 +1,12 @@
 import React from 'react';
 import {StyleSheet, View ,Image} from 'react-native';
 import colors from '../config/colors';
-import AppText from './AppText.txt';
+import AppText from './AppText';
 
 function Card({title,subTitle,image}) {
     return (
         <View style = {styles.card}>
-            <Image style = {styles.imageS} source={require(image)} ></Image>
+            <Image style = {styles.imageS} source={image} ></Image>
             <View style = {styles.detailsContainer}>
              <AppText style = {styles.title}>{title}</AppText>
              <AppText style = {styles.subTitle}>{subTitle}</AppText>
