@@ -6,6 +6,9 @@ import AppText from '../components/AppText';
 import Screen from '../components/Screen';
 import {Formik} from 'formik';
 import * as Yup from 'yup';
+import ErrorMessage from '../components/ErrorMessage';
+import AppFormField from '../components/AppFormField';
+import SubmitButton from '../components/SubmitButton';
 
 const validationSchema = Yup.object().shape({
     email: Yup.string().required().email().label("Email"),
@@ -18,36 +21,34 @@ function LoginScreen(props) {
     return (
         <Screen style={styles.container}>
             <Image style={styles.logo}
-            source={require("../assets/adaptive-icon.png")}/>
+            source={require("../assets/d7.png")}/>
             <Formik
                 initialValues={{email:'',password:''}}
                 onSubmit={values => console.log(values)}
                 validationSchema={validationSchema}
             >
 
-             {({handleChange,handleSubmit,errors })=>(
+             {()=>(
                  <>
-            <AppTextInput
+            <AppFormField
+            name="email"
             autoCapitalize="none"
             autoCorrect={false}
             icon="email"
             keyboardType="email-address"
-            onChangeText={handleChange("email")}
             placeholder="Email"
             textContentType="emailAddress"
             />
-            <AppText style={{color: 'red'}}>{errors.email}</AppText>
-            <AppTextInput
+            <AppFormField
+            name="password"
             autoCapitalize="none"
             autoCorrect={false}
             icon="lock"
-            onChangeText={handleChange("password")}
             placeholder="Password"
             secureTextEntry={true}
             textContentType="password"
             />
-            <AppText style={{color: 'red'}}>{errors.password}</AppText>
-            <AppButton title="login" onPress={handleSubmit}/>
+            <SubmitButton title ="login"/>
                  </>
              )}
             </Formik>
@@ -58,8 +59,8 @@ function LoginScreen(props) {
 const styles = StyleSheet.create({
     logo :
     {
-        width:80,
-        height:80,
+        width:180,
+        height:180,
         alignSelf:'center',
     },
     container:
