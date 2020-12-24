@@ -1,5 +1,5 @@
 import React from 'react';
-import AppText from './AppText';
+import AppText from '../AppText';
 import { TextInput, View ,StyleSheet, TouchableWithoutFeedback, Modal, Button, FlatList } from 'react-native';
 
 function ErrorMessage({error,visible}) {
