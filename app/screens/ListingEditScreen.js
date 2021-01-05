@@ -9,6 +9,7 @@ import {
   SubmitButton,
 } from "../components/Forms";
 import Screen from "../components/Screen";
+import CatergoryPickerItem from "../components/CategoryPickerItem"
 
 const validationSchema = Yup.object().shape({
   title: Yup.string().required().min(1).label("Title"),
@@ -18,9 +19,9 @@ const validationSchema = Yup.object().shape({
 });
 
 const categories = [
-  { label: "Furniture", value: 1 },
-  { label: "Clothing", value: 2 },
-  { label: "Camera", value: 3 },
+  { label: "Furniture", value: 1,backgroundColor:'red' ,icon:'apps'},
+  { label: "Clothing", value: 2,backgroundColor:'green' ,icon:'apps' },
+  { label: "Camera", value: 3 ,backgroundColor:'blue' ,icon:'lock'},
 ];
 
 function ListingEditScreen() {
@@ -42,8 +43,9 @@ function ListingEditScreen() {
           maxLength={8}
           name="price"
           placeholder="Price"
+          width={120}
         />
-        <Picker items={categories} name="category" placeholder="Category" />
+        <Picker items={categories} numberOfColumns={3} name="category" placeholder="Category" width="50%"PickerItemComponent={CatergoryPickerItem}/>
         <FormField
           maxLength={255}
           multiline
