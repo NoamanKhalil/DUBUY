@@ -6,22 +6,22 @@ import {
   Modal,
   Button,
   FlatList,
+  PlatformColor,
 } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import defaultStyles from "../config/styles";
 import AppText from "./AppText";
 import Screen from "./Screen";
 import PickerItem from "./PickerItem";
-
 function AppPicker({
-  numberOfColumns = 1,
   icon,
-  placeholder,
   items,
-  onSelectedItem,
+  numberOfColumns = 1,
+  onSelectItem,
+  PickerItemComponent = PickerItem,
+  placeholder,
   selectedItem,
   width = "100%",
-  PickerItemComponent = PickerItem,
 }) {
   const [modalVisible, setModalVisible] = useState(false);
 
