@@ -31,7 +31,13 @@ import ImageInput from "./app/components/ImageInput";
 import * as ImagePicker from "expo-image-picker";
 import * as Permissions from "expo-permissions";
 import ImageInputList from "./app/components/ImageInputList";
+import { NavigationContainer } from "@react-navigation/native";
+import AuthNavigator from "./app/navigation/AuthNavigator";
 
 export default function App() {
-  return <ListingEditScreen />;
+  return (
+    <NavigationContainer>
+      <AuthNavigator />
+    </NavigationContainer>
+  );
 }
