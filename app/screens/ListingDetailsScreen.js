@@ -14,8 +14,8 @@ function ListingDetailsScreen({ route }) {
         <AppText style={styles.subtitle}>${listing.price}</AppText>
         <View style={styles.userContainer}>
           <ListItem
-            image={require("../assets/mosh.jpg")}
-            title="Me name is mosh"
+            image={require("../assets/Noaman.jpg")}
+            title="Me name is Noaman"
             subTitle="Listings 10"
           />
         </View>
@@ -30,25 +30,21 @@ const styles = StyleSheet.create({
     height: 300,
     resizeMode: "contain",
   },
-  setColorPink: {
-    color: "#e91e63",
-  },
   subtitle: {
-    color: colors.white,
+    color: colors.secondary,
     fontWeight: "bold",
     fontSize: 20,
-    marginVertical: 100,
+    marginVertical: 5,
   },
   title: {
     fontSize: 24,
     fontWeight: "500",
-    padding: 20,
   },
   detailsContainer: {
     padding: 20,
   },
   userContainer: {
-    marginVertical: 500,
+    marginVertical: 5,
   },
 });
 

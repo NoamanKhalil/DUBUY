@@ -30,7 +30,7 @@ function AccountScreen({ navigation }) {
         <ListItem
           title="fred"
           subTitle="name@gmail.com"
-          image={require("../assets/mosh.jpg")}
+          image={require("../assets/Noaman.jpg")}
         />
       </View>
       <View style={styles.container}>

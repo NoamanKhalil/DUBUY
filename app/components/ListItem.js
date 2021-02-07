@@ -51,7 +51,6 @@ const styles = StyleSheet.create({
     flex: 1,
     marginLeft: 15,
     justifyContent: "center",
-    alignItems: "center",
   },
   image: {
     width: 70,
@@ -64,6 +63,7 @@ const styles = StyleSheet.create({
   },
   subTitle: {
     color: colors.medium,
+    padding: 10,
   },
 });
 
