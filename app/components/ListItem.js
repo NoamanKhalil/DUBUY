@@ -19,7 +19,7 @@ function ListItem({
         <View style={styles.container}>
           {IconComponent}
           {image && <Image style={styles.image} source={image} />}
-          <View styles={styles.detailsContainer}>
+          <View style={styles.detailsContainer}>
             <AppText style={styles.title} numberOfLines={1}>
               {title}
             </AppText>
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
   container: {
     alignItems: "center",
     flexDirection: "row",
-    padding: 20,
+    padding: 15,
     backgroundColor: colors.white,
     alignItems: "center",
   },

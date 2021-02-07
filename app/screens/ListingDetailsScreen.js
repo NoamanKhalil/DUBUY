@@ -8,11 +8,11 @@ function ListingDetailsScreen({ route }) {
   const listing = route.params;
   return (
     <View>
-      <Image styles={styles.image} source={listing.image} />
+      <Image style={styles.image} source={listing.image} />
       <View style={styles.detailsContainer}>
-        <AppText styles={styles.title}>{listing.title}</AppText>
-        <AppText styles={styles.subtitle}>${listing.price}</AppText>
-        <View styles={styles.userContainer}>
+        <AppText style={styles.title}>{listing.title}</AppText>
+        <AppText style={styles.subtitle}>${listing.price}</AppText>
+        <View style={styles.userContainer}>
           <ListItem
             image={require("../assets/mosh.jpg")}
             title="Me name is mosh"
@@ -26,9 +26,8 @@ function ListingDetailsScreen({ route }) {
 
 const styles = StyleSheet.create({
   image: {
-    flex: 1,
-    width: "50%",
-    height: 50,
+    width: "100%",
+    height: 300,
     resizeMode: "contain",
   },
   setColorPink: {

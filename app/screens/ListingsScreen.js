@@ -1,11 +1,10 @@
 import React from "react";
 import { FlatList, StyleSheet } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
 
 import Screen from "../components/Screen";
 import Card from "../components/Card";
 import colors from "../config/colors";
+import routes from "..components/routes";
 
 const listings = [
   {
@@ -33,9 +32,7 @@ function ListingsScreen({ navigation }) {
             title={item.title}
             subTitle={"AED" + item.price}
             image={item.image}
-            onPress={() =>
-              navigation.navigate("ListingsDetails", { item: item })
-            }
+            onPress={() => navigation.navigate(routes.LISTING_DETAILS, item)}
           />
         )}
       />
