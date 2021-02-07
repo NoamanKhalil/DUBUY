@@ -6,7 +6,7 @@ import { StyleSheet, View, FlatList } from "react-native";
 import colors from "../config/colors";
 import Icon from "../components/icon";
 import ListItemSeperator from "../components/ListItemSeperator";
-import routes from "..components/routes";
+import routes from "../navigation/routes";
 
 const menuItems = [
   {
