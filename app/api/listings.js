@@ -16,9 +16,10 @@ const addlisting = (listing) => {
       uri: image,
     })
   );
-  if (listing.location) data.append("location", JSON.stringify(listi.location));
+  if (listing.location)
+    data.append("location", JSON.stringify(listing.location));
 
-  return client.post(endpoint);
+  return client.post(endpoint, data);
 };
 
 export default {
