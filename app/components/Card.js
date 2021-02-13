@@ -24,20 +24,20 @@ function Card({ title, subTitle, imageUrl, onPress }) {
 
 const styles = StyleSheet.create({
   card: {
-    borderRadius: 15,
+    borderRadius: 10,
     backgroundColor: colors.white,
-    marginBottom: 20,
+    marginBottom: 15,
     overflow: "hidden",
   },
   imageS: {
     width: "100%",
-    height: 100,
+    height: 125,
   },
   detailsContainer: {
-    padding: 20,
+    padding: 10,
   },
   title: {
-    marginBottom: 7,
+    marginBottom: 5,
   },
   subTitle: {
     color: colors.secondary,

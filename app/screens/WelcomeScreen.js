@@ -7,14 +7,14 @@ function WelcomeScreen({ navigation }) {
     <ImageBackground
       blurRadius={10}
       style={styles.background}
-      source={require("../assets/background.jpg")}
+      source={require("../assets/JabbleAppBG_Color.png")}
     >
       <View style={styles.logocontainer}>
         <Image
           style={styles.logo}
           source={require("../assets/JabbleLogo.png")}
         ></Image>
-        <Text style={styles.tagline}>We are a cool app</Text>
+        <Text style={styles.tagline}>The classifieds app</Text>
       </View>
       <View style={styles.buttonsContainer}>
         <AppButton title="Login" onPress={() => navigation.navigate("Login")} />
