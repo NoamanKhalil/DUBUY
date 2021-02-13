@@ -12,7 +12,7 @@ function WelcomeScreen({ navigation }) {
       <View style={styles.logocontainer}>
         <Image
           style={styles.logo}
-          source={require("../assets/icon.png")}
+          source={require("../assets/JabbleLogo.png")}
         ></Image>
         <Text style={styles.tagline}>We are a cool app</Text>
       </View>
