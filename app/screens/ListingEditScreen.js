@@ -10,7 +10,6 @@ import {
 } from "../components/Forms";
 import Screen from "../components/Screen";
 import CatergoryPickerItem from "../components/CategoryPickerItem";
-import { yupToFormErrors } from "formik";
 import FormImagePicker from "../components/Forms/FormImagePicker";
 import useLocation from "../hooks/useLocation";
 import listingsApi from "../api/listings";
@@ -132,7 +131,6 @@ function ListingEditScreen() {
           width={120}
         />
         <Picker
-          er
           items={categories}
           numberOfColumns={3}
           name="category"
