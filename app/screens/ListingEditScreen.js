@@ -14,6 +14,8 @@ import { yupToFormErrors } from "formik";
 import FormImagePicker from "../components/Forms/FormImagePicker";
 import useLocation from "../hooks/useLocation";
 import listingsApi from "../api/listings";
+import { useState } from "react";
+import UploadScreen from "./UploadScreen";
 
 const validationSchema = Yup.object().shape({
   title: Yup.string().required().min(1).label("Title"),
@@ -82,9 +84,18 @@ const categories = [
 
 function ListingEditScreen() {
   const location = useLocation();
+  const [uploadVisiable, setUploadVisible] = useState(false);
+  const [progress, setProgress] = useState(0);
 
   const handleSubmit = async (listing) => {
-    const result = await listingsApi.addlisting({ ...listing, location });
+    setProgress(0);
+    setUploadVisible(true);
+    const result = await listingsApi.addlisting(
+      { ...listing, location },
+      (progress) => setProgress(progress)
+    );
+    setUploadVisible(false);
+
     if (!result.ok) {
       return alert("could not save the listings please try again");
     } else {
@@ -94,6 +105,7 @@ function ListingEditScreen() {
 
   return (
     <Screen style={styles.container}>
+      <UploadScreen progress={progress} visible={uploadVisiable} />
       <Form
         initialValues={{
           title: "",
