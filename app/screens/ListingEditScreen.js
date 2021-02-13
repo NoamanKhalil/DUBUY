@@ -94,9 +94,9 @@ function ListingEditScreen() {
       { ...listing, location },
       (progress) => setProgress(progress)
     );
-    setUploadVisible(false);
 
     if (!result.ok) {
+      setUploadVisible(false);
       return alert("could not save the listings please try again");
     } else {
       alert("Success");
@@ -105,7 +105,11 @@ function ListingEditScreen() {
 
   return (
     <Screen style={styles.container}>
-      <UploadScreen progress={progress} visible={uploadVisiable} />
+      <UploadScreen
+        onDone={() => setUploadVisible(false)}
+        progress={progress}
+        visible={uploadVisiable}
+      />
       <Form
         initialValues={{
           title: "",
