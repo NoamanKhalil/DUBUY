@@ -1,3 +1,52 @@
-    <NavigationContainer theme={navigationTheme}>
-      <AppNavigator />
-    </NavigationContainer>
+
+
+    import React from "react";
+import { Formik } from "formik";
+
+function AppForm({ initialValues, onSubmit, myScheme, children }) {
+  return (
+    <Formik
+      initialValues={initialValues}
+      onSubmit={onSubmit}
+      validationSchema={myScheme}
+    >
+      {children}
+    </Formik>
+  );
+}
+
+export default AppForm;
+
+
+function LoginScreen(props) {
+  return (
+    <Screen style={styles.container}>
+      <Image style={styles.logo} source={require("../assets/JabbleLogo.png")} />
+      <AppForm
+        initialValues={{ email: "", password: "" }}
+        onSubmit={(values) => console.log(values)}
+        validationSchema={schema}
+      >
+        <AppFormField
+          autoCapitalize="none"
+          autoCorrect={false}
+          icon="email"
+          keyboardType="email-address"
+          name="email"
+          placeholder="Email"
+          textContentType="emailAddress"
+        />
+        <AppFormField
+          autoCapitalize="none"
+          autoCorrect={false}
+          icon="lock"
+          name="password"
+          placeholder="Password"
+          secureTextEntry
+          textContentType="password"
+        />
+        <SubmitButton title="login" />
+      </AppForm>
+    </Screen>
+  );
+}

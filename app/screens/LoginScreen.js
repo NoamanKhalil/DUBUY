@@ -4,7 +4,7 @@ import Screen from "../components/Screen";
 import * as Yup from "yup";
 import { AppForm, SubmitButton, AppFormField } from "../components/Forms";
 
-const validationSchema = Yup.object().shape({
+const schema = Yup.object().shape({
   email: Yup.string().required().email().label("Email"),
   password: Yup.string().required().min(4).label("Password"),
 });
@@ -16,7 +16,7 @@ function LoginScreen(props) {
       <AppForm
         initialValues={{ email: "", password: "" }}
         onSubmit={(values) => console.log(values)}
-        validationSchema={validationSchema}
+        validationSchema={schema}
       >
         <AppFormField
           autoCapitalize="none"
