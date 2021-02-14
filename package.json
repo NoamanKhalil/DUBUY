@@ -20,7 +20,7 @@
     "expo-location": "~9.0.0",
     "expo-permissions": "~9.3.0",
     "expo-status-bar": "~1.0.2",
-    "formik": "^2.2.6",
+    "formik": "^2.1.4",
     "lottie-react-native": "~2.6.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
@@ -31,7 +31,7 @@
     "react-native-safe-area-context": "3.1.4",
     "react-native-screens": "~2.10.1",
     "react-native-web": "^0.15.0",
-    "yup": "^0.32.8"
+    "yup": "^0.28.5"
   },
   "devDependencies": {
     "@babel/core": "~7.9.0"
