@@ -28,16 +28,19 @@ const styles = StyleSheet.create({
     backgroundColor: colors.white,
     marginBottom: 15,
     overflow: "hidden",
+    flex: 1,
+    margin: 10,
   },
   imageS: {
     width: "100%",
-    height: 125,
+    height: 80,
   },
   detailsContainer: {
     padding: 10,
   },
   title: {
     marginBottom: 5,
+    fontSize: 12,
   },
   subTitle: {
     color: colors.secondary,
